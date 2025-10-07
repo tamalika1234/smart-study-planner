@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Study Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Smart Study Planner</h1>
+            <p>Organize, Track, and Achieve Your Academic Goals</p>
+            <div class="stats">
+                <div class="stat-card">
+                    <h3>Total Tasks</h3>
+                    <p id="totalTasks">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Completed</h3>
+                    <p id="completedTasks">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Pending</h3>
+                    <p id="pendingTasks">0</p>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressBar">0%</div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="section">
+                <h2>➕ Add New Task</h2>
+                <form id="taskForm">
+                    <div class="form-group">
+                        <label>Task Title</label>
+                        <input type="text" id="taskTitle" placeholder="e.g., Complete Math Assignment" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Subject</label>
+                        <input type="text" id="taskSubject" placeholder="e.g., Mathematics" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea id="taskDescription" placeholder="Add details about your task..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Due Date</label>
+                        <input type="datetime-local" id="taskDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Priority</label>
+                        <select id="taskPriority">
+                            <option value="high">High Priority</option>
+                            <option value="medium" selected>Medium Priority</option>
+                            <option value="low">Low Priority</option>
+                        </select>
+                    </div>
+                    <button type="submit">Add Task</button>
+                </form>
+            </div>
+
+            <div class="section">
+                <h2>📋 Your Tasks</h2>
+                <div class="filter-section">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="pending">Pending</button>
+                    <button class="filter-btn" data-filter="completed">Completed</button>
+                    <button class="filter-btn" data-filter="high">High Priority</button>
+                </div>
+                <div class="task-list" id="taskList">
+                    <p style="text-align: center; color: #999;">No tasks yet. Add your first task to get started!</p>
+                </div>
+            </div>
+
+            <div class="section" style="grid-column: 1 / -1;">
+                <h2>📅 Timeline View</h2>
+                <div class="timeline" id="timeline">
+                    <p style="text-align: center; color: #999;">Your upcoming tasks will appear here</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
