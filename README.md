@@ -33,7 +33,7 @@ It allows users to create schedules, set goals, track progress, and stay consist
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/smart-study-planner.git
+   git clone https://github.com/tamalika1234/smart-study-planner.git
 
 2. Open the folder
 
